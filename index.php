@@ -57,9 +57,9 @@ function bondJSON(data){
 //JSON processing data goes here
     console.log(data)
     //this defines the type of info returned
-    $('#albumstitle').html(data.title);
+    $('#filmtitle').html(data.title);
 
-    $('#albums').html('');
+    $('#films').html('');
 
 
     $.each(data.albums,function(i, item){
@@ -84,7 +84,7 @@ function bondJSON(data){
 function bondTemplate(album){
     return `
         <div class="album">
-            <b>Film:</b> ${album.Year}<br />
+            <b>Year:</b> ${album.Year}<br />
             <b>Title:</b> ${album.Title}<br />
             <b>Artist:</b> ${album.Artist}<br />
             <b>Sales:</b> ${album.Sales}<br />
