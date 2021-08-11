@@ -62,7 +62,7 @@ function bondJSON(data){
     $('#films').html('');
 
 
-    /*$.each(data.films,function(i, item){
+    $.each(data.films,function(i, item){
         let str = bondTemplate(item);
 
 
@@ -70,7 +70,7 @@ function bondJSON(data){
         //$str.appendTo('#films');
         $('<div></div>').html(str).appendTo('#films');
     });
-    */
+    
 //allows us to see all data on page
     let myData = JSON.stringify(data,null,4);
     myData = '<pre>' + myData + '</pre>';
@@ -81,25 +81,28 @@ function bondJSON(data){
     //$("#output").text(JSON.stringify(data));
 }
 
-function bondTemplate(film){
+function bondTemplate(album){
     return `
-        <div class="film">
-            <b>Film:</b> ${film.Film}<br />
-            <b>Title:</b> ${film.Title}<br />
-            <b>Year:</b> ${film.Year}<br />
-            <b>Director:</b> ${film.Director}<br />
-            <b>Producers:</b> ${film.Producers}<br />
-            <b>Writers:</b> ${film.Writers}<br />
-            <b>Composer:</b> ${film.Composer}<br />
-            <b>Bond:</b> ${film.Bond}<br />
-            <b>Budget:</b> ${film.Budget}<br />
-            <b>Box Office:</b> ${film.BoxOffice}<br />
-            <div class="pic"><img src="thumbnails/${film.Image}"></div>
+        <div class="album">
+            <b>Film:</b> ${album.Year}<br />
+            <b>Title:</b> ${album.Title}<br />
+            <b>Artist:</b> ${album.Artist}<br />
+            <b>Sales:</b> ${album.Sales}<br />
+            <b>Genre:</b> ${album.Genre}<br />
+            <div class="pic"><img src="thumbnails/${album.Image}"></div>
         </div>
     `;
 }
 
-
+/*{
+			"Year":2020,
+			"Title":"Just Cause Y'all Waited",
+			"Artist":"Lil Durk",
+			"Sales":5000000,
+			"Genre":"Hip Hop",
+			"Image":"jcyw2.jpg"
+			},
+*/
 </script>
 </head>
     <body>
