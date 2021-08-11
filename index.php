@@ -57,12 +57,12 @@ function bondJSON(data){
 //JSON processing data goes here
     console.log(data)
     //this defines the type of info returned
-    $('#filmtitle').html(data.title);
+    $('#albumstitle').html(data.title);
 
-    $('#films').html('');
+    $('#albums').html('');
 
 
-    $.each(data.films,function(i, item){
+    $.each(data.albums,function(i, item){
         let str = bondTemplate(item);
 
 
