@@ -102,11 +102,11 @@ function bondTemplate(album){
 
     return `
         <div class="album">
-            <b>Title: </b>${album.Title}</br>
-            <b>Genre: </b>${album.Genre}</br>
-            <b>Company: </b>${album.Company}</br>
             <b>Year: </b>${album.Year}</br>
-            <b>Rating: </b>${album.Rating}</br>
+            <b>Title: </b>${album.Title}</br>
+            <b>Artist: </b>${album.Artist}</br>
+            <b>Sales: </b>${album.Sales}</br>
+            <b>Genre: </b>${album.Genre}</br>
             <div class="pic"><img src="thumbnails/${album.Image}" /></div>
         </div>
     `;
