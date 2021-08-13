@@ -118,7 +118,7 @@ function bondTemplate(album){
     <body>
     <h1>Albums Web Service</h1>
         <a href="year" class="category">Albums By Year</a><br />
-        <a href="title" class="category">Albums By Title</a>
+        <a href="genre" class="category">Albums By Genre</a>
         <h3 id="filmtitle">Title Will Go Here</h3>
         <div id="films">
             <!--
